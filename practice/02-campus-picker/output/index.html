@@ -224,7 +224,21 @@
       margin: 28px 2px 12px;
     }
 
+    .history-title-group {
+      display: flex;
+      align-items: baseline;
+      gap: 9px;
+    }
+
     .history-head h2 { margin: 0; font-size: 1.15rem; }
+
+    .history-count {
+      color: var(--accent);
+      font-size: .9rem;
+      font-weight: 850;
+      font-variant-numeric: tabular-nums;
+    }
+
     .clear { min-height: 38px; padding: 0 12px; font-size: .86rem; }
 
     .history {
@@ -266,7 +280,12 @@
       .controls { grid-template-columns: 1fr; gap: 12px; padding: 17px; }
       .actions { padding: 0 17px 17px; flex-direction: column; }
       .button { width: 100%; }
-      .result { min-height: 220px; }
+      .result {
+        min-height: 290px;
+        padding: 32px 24px;
+      }
+      .result h2 { font-size: clamp(2.15rem, 10vw, 3rem); }
+      .result .hint { font-size: 1.2rem; line-height: 1.5; }
       .history li { grid-template-columns: 48px 1fr; }
       .history-meta { grid-column: 2; text-align: left; }
     }
@@ -325,7 +344,10 @@
 
     <section aria-labelledby="history-title">
       <div class="history-head">
-        <h2 id="history-title" data-i18n="recent">Recent picks</h2>
+        <div class="history-title-group">
+          <h2 id="history-title" data-i18n="recent">Recent picks</h2>
+          <span class="history-count" id="history-count" aria-live="polite">0 / 5</span>
+        </div>
         <button type="button" class="button clear" id="clear" data-i18n="clear">Clear history</button>
       </div>
       <ol class="history" id="history"></ol>
@@ -376,6 +398,7 @@
     const energySelect = document.querySelector("#energy");
     const result = document.querySelector("#result");
     const historyList = document.querySelector("#history");
+    const historyCount = document.querySelector("#history-count");
     const languageGroup = document.querySelector(".language");
     let language = "en";
     let history = [];
@@ -411,6 +434,7 @@
     }
 
     function renderHistory() {
+      historyCount.textContent = `${history.length} / 5`;
       if (!history.length) {
         historyList.innerHTML = `<li class="empty-history">${copy[language].empty}</li>`;
         return;
