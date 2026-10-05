@@ -1,0 +1,62 @@
+[
+  {
+    "source": "announcement.txt",
+    "destination": "communications/announcement.txt",
+    "reason": "Announcement for participants; retained separately despite identical content."
+  },
+  {
+    "source": "announcement_copy.txt",
+    "destination": "communications/announcement_copy.txt",
+    "reason": "Announcement copy; retained separately because every original must be preserved."
+  },
+  {
+    "source": "budget_draft.txt",
+    "destination": "resources/budget_draft.txt",
+    "reason": "Draft information about a proposed resource budget."
+  },
+  {
+    "source": "equipment_backup.txt",
+    "destination": "resources/equipment_backup.txt",
+    "reason": "Equipment inventory backup; retained separately despite identical content."
+  },
+  {
+    "source": "equipment_list.txt",
+    "destination": "resources/equipment_list.txt",
+    "reason": "Equipment inventory used for resource planning."
+  },
+  {
+    "source": "feedback_questions.txt",
+    "destination": "feedback/feedback_questions.txt",
+    "reason": "Questions intended to collect participant feedback."
+  },
+  {
+    "source": "meeting_notes.txt",
+    "destination": "planning/meeting_notes.txt",
+    "reason": "Meeting record concerning a pending activity decision."
+  },
+  {
+    "source": "next_steps.txt",
+    "destination": "planning/next_steps.txt",
+    "reason": "Follow-up instructions for comparing unresolved proposals."
+  },
+  {
+    "source": "poster_text.txt",
+    "destination": "communications/poster_text.txt",
+    "reason": "Promotional text intended for a poster."
+  },
+  {
+    "source": "proposal_final.txt",
+    "destination": "proposals/proposal_final.txt",
+    "reason": "Distinct proposal version preserved without assuming approval."
+  },
+  {
+    "source": "proposal_final2.txt",
+    "destination": "proposals/proposal_final2.txt",
+    "reason": "Differing proposal version preserved without assuming approval."
+  },
+  {
+    "source": "rain_plan.txt",
+    "destination": "planning/rain_plan.txt",
+    "reason": "Contingency planning for rainy conditions."
+  }
+]
